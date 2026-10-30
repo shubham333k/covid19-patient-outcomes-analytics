@@ -37,8 +37,7 @@ The first two page screenshots have been added. The screenshot for **Outcome Tre
 
 ### Outcome Trends & Distribution
 
-![Outcome Trends & Distribution Analytics Power BI dashboard page](images/Outcome-Trends-Distribution.png)
-
+![Outcome Trends & Distribution Analytics Power BI dashboard page](images/outcome-trends-distribution.png)
 
 ## Project contents
 
