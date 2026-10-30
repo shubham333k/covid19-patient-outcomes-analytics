@@ -19,12 +19,31 @@ This repository contains a patient-level COVID-19 dataset and a Power BI report 
 
 The report's model includes the `Covid_Patients` table, a `Comorbidity_Long` table, and a measures table. It also uses derived groupings such as `Age_Group`, `Patient_Type_Label`, and `Comorbidity_Bucket`. The PBIX is the interactive analytical deliverable; the CSV is the accompanying source file supplied with the project.
 
+## About
+
+COVID-19 Patient Outcomes Analytics is a Power BI portfolio project for exploring how recorded demographics, care pathways, and comorbidities relate to patient outcome patterns in the supplied extract. The report is organized into population overview, comorbidity and demographic analysis, and outcome-distribution views, with slicers and age-group drillthrough for cohort exploration. It is a descriptive analytics artifact, not a clinical decision tool; the dataset's source and codebook were not supplied, so interpretations should remain cautious.
+
+## Dashboard screenshots
+
+The first two page screenshots have been added. The screenshot for **Outcome Trends & Distribution** is still pending and will be added when supplied.
+
+### Population Health Overview
+
+![Population Health Overview Power BI dashboard page](images/population-health-overview.png)
+
+### Comorbidity & Demographic Analytics
+
+![Comorbidity and Demographic Analytics Power BI dashboard page](images/comorbidity-demographic-analytics.png)
+
 ## Project contents
 
 ```text
 .
 ├── data/
 │   └── COVID19_Data.csv
+├── images/
+│   ├── population-health-overview.png
+│   └── comorbidity-demographic-analytics.png
 ├── powerbi/
 │   └── Covid_Pateint_Dashboard.pbix
 └── README.md
@@ -77,6 +96,10 @@ Open `powerbi/Covid_Pateint_Dashboard.pbix` in Microsoft Power BI Desktop. The r
 
 The labels above describe the visuals and fields found in the uploaded PBIX. The exact formulas behind each displayed measure should be reviewed in the model before using KPI values in external reporting. Slicers and cross-filtering change the denominator and interpretation of many visuals.
 
+### Metric validation note
+
+The supplied CSV contains 9,999 rows, while the first two screenshots show some patient-count visuals in the hundreds of thousands and a demographic table total near 100,000. Those displayed totals do not reconcile directly to the supplied CSV as it currently stands. The PBIX may use a larger source, a transformed or expanded model, or measures with different counting/formatting logic. Verify the model's source row count, joins, filters, and DAX definitions before presenting the screenshots' KPI values as results from this CSV.
+
 ## How to use
 
 1. Clone or download this repository.
@@ -100,4 +123,6 @@ No `LICENSE` file is included. Unless the owner adds an explicit license and con
 ## Repository files
 
 - [`data/COVID19_Data.csv`](data/COVID19_Data.csv) — supplied CSV extract.
+- [`images/population-health-overview.png`](images/population-health-overview.png) — first dashboard page screenshot.
+- [`images/comorbidity-demographic-analytics.png`](images/comorbidity-demographic-analytics.png) — second dashboard page screenshot.
 - [`powerbi/Covid_Pateint_Dashboard.pbix`](powerbi/Covid_Pateint_Dashboard.pbix) — supplied Power BI report.
